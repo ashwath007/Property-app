@@ -17,6 +17,13 @@ const HomeNavigation = () => {
       activeColor="#fff"
       barStyle={{ backgroundColor: '#CA3E47' }}
     >
+          <Tab.Screen name="Manage" component={Manage} 
+            options={{
+                tabBarLabel: 'Manage',
+                tabBarIcon: ({ color, size }) => (
+                  <MaterialCommunityIcons name="video" color={color} size={26} />
+                ),}}
+        />
         <Tab.Screen name="Home" component={Home} 
         options={{
             tabBarLabel: 'Home',
@@ -24,13 +31,7 @@ const HomeNavigation = () => {
               <MaterialCommunityIcons name="home" color={color} size={26} />
             ),}}
         />
-        <Tab.Screen name="Manage" component={Manage} 
-            options={{
-                tabBarLabel: 'Manage',
-                tabBarIcon: ({ color, size }) => (
-                  <MaterialCommunityIcons name="video" color={color} size={26} />
-                ),}}
-        />
+      
         <Tab.Screen name="Profile" component={Profile} 
             options={{
                 tabBarLabel: 'Profile',
